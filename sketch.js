@@ -538,6 +538,7 @@ function draw() {
     elt.visible = false
     el.visible = false
     if(mousePressedOver(home)){
+      bosshpc.visible = false
       bullet.visible = false
       g.visible = false
         chest.visible = false
@@ -633,6 +634,9 @@ function draw() {
     e7.y = moveCanvas.y - 20
     }
     if(mousePressedOver(retry)){
+      bossStat = "NA"
+      bosshp = 10
+      boss.visible = false
       g.visible = true
         chest.visible = true
       zones = 0.25
@@ -991,10 +995,25 @@ function draw() {
       el.visible = false
       elt.visible = false
       bossStat = "A"    
-      bh.visible = true
+      //bh.visible = true
     }
     else{
       el.visible = true
+    }
+
+    if(bossStat === "A"){
+      boss.visible = true
+      bossb1.visible = true
+      bossb2.visible = true
+      bossb3.visible = true
+      bh.visible = true      
+    }
+    if(bossStat === "NA"){
+      boss.visible = false
+      bossb1.visible = false
+      bossb2.visible = false
+      bossb3.visible = false
+      bh.visible = false      
     }
 
   }
@@ -1568,6 +1587,7 @@ if(char === "RR"){
     ob4.visible = true
 
     if(mousePressedOver(home)){
+      bosshpc.visible = false
       bullet.visible = false
       g.visible = false
         chest.visible = false
@@ -2288,6 +2308,7 @@ if(char === "RR"){
       home.x = 500
       home.y = 525
       if(mousePressedOver(home)){
+        bosshpc.visible = false
         bullet.visible = false
         g.visible = false
         chest.visible = false
