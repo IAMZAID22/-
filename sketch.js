@@ -538,6 +538,8 @@ function draw() {
     elt.visible = false
     el.visible = false
     if(mousePressedOver(home)){
+      char = ""
+      cg = Math.round(random(1,3))
       bosshpc.visible = false
       bullet.visible = false
       g.visible = false
@@ -637,6 +639,8 @@ function draw() {
       bossStat = "NA"
       bosshp = 10
       boss.visible = false
+      bosshpc.visible = false
+      bh.visible = false
       g.visible = true
         chest.visible = true
       zones = 0.25
@@ -1587,6 +1591,8 @@ if(char === "RR"){
     ob4.visible = true
 
     if(mousePressedOver(home)){
+      char = ""
+        cg = Math.round(random(1,3))
       bosshpc.visible = false
       bullet.visible = false
       g.visible = false
@@ -1678,7 +1684,27 @@ if(char === "RR"){
 
     }
 
+    if(bossStat === "A"){
+      boss.visible = true
+      bosshpc.visible = true
+      bh.visible = true
+      bossb1.visible = true
+      bossb2.visible = true
+      bossb3.visible = true
+    }
+    else{
+      boss.visible = false
+      bosshpc.visible = false
+      bh.visible = false
+      bossb1.visible = false
+      bossb2.visible = false
+      bossb3.visible = false
+    }
+
     if(mousePressedOver(retry)){
+      bossStat = "NA"
+      bosshpc.visible = false
+      bh.visible = false
       g.visible = true
         chest.visible = true
       zones = 0.25
@@ -2308,6 +2334,8 @@ if(char === "RR"){
       home.x = 500
       home.y = 525
       if(mousePressedOver(home)){
+        char = ""
+        cg = Math.round(random(1,3))
         bosshpc.visible = false
         bullet.visible = false
         g.visible = false
